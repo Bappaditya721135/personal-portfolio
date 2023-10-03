@@ -9,7 +9,7 @@
 /* nav bar  */
 
 .nav-bar {
-    font-family: 'Fasthand', cursive;
+    font-family: cursive;
     color: rgba(0, 0, 0, 0.7);
     display: flex;
     padding-inline: 40px;
@@ -18,6 +18,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     border-bottom: 1px solid black;
+    position: relative;
 }
 
 .name {
@@ -35,21 +36,44 @@
 
 .nav-links > .nav-link, .name {
     cursor: pointer;
+    padding: 5px;
+    border-radius: 10px 0 10px 0;
+    white-space: nowrap;
 }
 
-.nav-links > .nav-link:hover, .name:hover {
+.nav-links > .nav-link:hover {
     text-decoration: underline;
+    color: white;
+    background-color: blue;
+}
+
+.name:hover {
     color: blue;
+    text-decoration: underline;
+}
+.icon {
+    display: none;
 }
 
 
-@media (max-width: 476px) {
+@media (max-width: 500px) {
     .nav-bar {
         flex-direction: column;
     }
 
     .nav-links {
+        display: none;
         flex-direction: column;
         align-items: center;
     }
+
+    .icon {
+        display: block;
+        position: absolute;
+        top: 12px;
+        /* transform: translateY(-50%); */
+        left: 90%;
+    }
+
+    
 }
