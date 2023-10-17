@@ -61,7 +61,7 @@
 }
 
 .icon {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 35px;
     right: 1rem;
@@ -185,10 +185,60 @@
     background-color: gray;
     border-radius: 10px;
     transition: 0.6s;
+    position: relative;
 }
 
+.project-links {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    /* display: flex;  */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.project-links>section>a {
+    list-style: none;
+    /* color: white; */
+    color: black;
+    text-decoration: none;
+    font-family: cursive;
+    background-color: yellow;
+    font-size: 1rem;
+    border: 1px solid black;
+
+}
+
+.project-1 {
+    background-image: url("./img/javascript-todo-app.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-1:hover>.project-links {
+    display: flex;
+}
+
+.project-2 {
+    background-image: url("./img/Screenshot\ 2023-10-11\ 122219.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-2:hover>.project-links {
+    display: flex;
+}
+
+
 .projects:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     box-shadow: 0 0 60px 0 rgba(0, 0, 255, 0.8);
 }
 
@@ -234,7 +284,7 @@
     }
 
     .icon { 
-        display: flex;
+        display: flex !important;
     }
     .nav-links-display {
         display: flex;
